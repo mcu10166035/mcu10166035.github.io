@@ -307,4 +307,6 @@ int main()
 技巧 : 
 ```cpp
 
-```
+```![week08-6](https://user-images.githubusercontent.com/114201423/198499676-df4c34bb-9ed1-4deb-b227-c59c28fec95e.PNG)
+
+![week08-6]
