@@ -186,3 +186,125 @@ int main()
 ```
 ![week07-4](https://user-images.githubusercontent.com/114201423/197105855-88870f4c-7492-48b0-b004-c105e6047026.png)
 
+# Week08
+
+## (1) 考試 : 最大公因數-輾轉相除法
+考前複習、考後檢討
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c ;
+    scanf("%d%d",&a,&b);
+
+    while(1)
+    {
+        c =a%b;
+	if (c==0) break;
+	a=b;
+	b=c;
+    }
+    printf("%d",b);
+}
+
+```
+
+## (2) 主題 : for迴圈金字塔
+技巧 : 2個 for
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    for (int i =1;i<=n;i++)
+    {
+        for (int k =1;k<=n;k++)
+        {
+            if (k<= n-i)
+            {
+                printf(" ");
+            }
+            else printf("*");
+        }
+        printf("\n");
+    }
+}
+```
+
+## (3) 主題 : while 迴圈金字塔
+技巧 : 2個 while
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    int i = 0;
+    while(i<n)
+    {
+        int k = 0;
+        while(k<n)
+        {
+            if (k<n-i-1) printf(" ");
+            else printf("*");
+            k++;
+        }
+        printf("\n");
+        i++;
+    }
+}
+
+```
+## (4) 主題 : 質數判斷
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    printf("要判斷你輸入的數字是不是孤獨的質數: ");
+    int n;
+    scanf("%d",&n);
+    int bad = 0;
+    for (int i =2;i<n;i++)
+    {
+        if(n%i==0) bad=1;
+    }
+    if (bad==0) printf("%d 是質數",n);
+    else printf("%d 不是質數",n);
+}
+
+```
+## (5) 主題 : 列出質數
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d",&a);
+
+    for (int n=2;n<=a;n++)
+    {
+        int bad = 0;
+        for (int i =2;i<n;i++)
+        {
+            if(n%i==0) bad=1;
+        }
+        if (bad==0) printf("%d ",n);
+    }
+}
+
+```
+## (6) 主題 :
+技巧 : 
+```cpp
+
+```
