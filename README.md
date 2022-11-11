@@ -353,6 +353,8 @@ int main()
 }
 
 ```
+![week10-1](https://user-images.githubusercontent.com/114201423/201259955-28c930b7-40f8-4537-aa97-a37878f63124.png)
+
 ## (3) 主題 : 陣列-倒著印
 技巧 : 
 ```cpp
@@ -372,6 +374,8 @@ int main()
 }
 
 ```
+![week10-2](https://user-images.githubusercontent.com/114201423/201259994-fbdc6680-e3ba-4dcf-8d11-8b031bd23506.png)
+
 ## (4) 主題 : 輸入 100 個數字，並倒著列出來
 技巧 : 
 ```cpp
@@ -403,4 +407,6 @@ int main()
 # git push
 # git status
 ```
+![week10-3](https://user-images.githubusercontent.com/114201423/201260022-c66133be-e7dd-499d-8025-f8b97a1582f6.png)
+
 # Week11
