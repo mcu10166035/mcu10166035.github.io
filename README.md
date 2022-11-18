@@ -410,3 +410,275 @@ int main()
 ![week10-3](https://user-images.githubusercontent.com/114201423/201260022-c66133be-e7dd-499d-8025-f8b97a1582f6.png)
 
 # Week11
+
+## (1) 考試 : 百數反印
+考前複習、考後檢討
+```cpp
+#include <stdio.h>
+
+int main()
+{
+	int a[100];
+	
+	for (int i=0;i<100;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	
+	for (int i=99;i>=0;i--)
+	{
+		printf("%d\n",a[i]);
+	}
+}
+
+```
+## (2) 主題 : 三數排列
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a =90,b=80;
+
+    printf("a:%d b:%d\n",a,b);
+
+    int temp =a;
+    a =b ;
+    b =temp;
+
+    printf("a:%d b:%d\n",a,b);
+}
+
+```
+![week11-1](https://user-images.githubusercontent.com/114201423/202610306-a3d55c99-5208-4bf4-b328-ceae54499ac9.png)
+
+## (3) 主題 : 三數排列2
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a =90,b=80,c =70;
+
+    if (a>b)
+    {
+        int temp =a;
+        a =b ;
+        b =temp;
+    }
+    if (b>c)
+    {
+        int temp =b;
+        b =c ;
+        c =temp;
+    }
+    if (a>b)
+    {
+        int temp =a;
+        a =b ;
+        b =temp;
+    }
+
+    printf("a:%d b:%d c:%d\n",a,b,c);
+}
+
+```
+![week11-2](https://user-images.githubusercontent.com/114201423/202610327-d051c1aa-c9ff-47c0-9d87-6802b79ed925.png)
+
+
+## (4) 主題 : 百數排列
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[10]={90,80,70,60,50,40,30,20,10,0};
+
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+}
+
+```
+
+![week11-3](https://user-images.githubusercontent.com/114201423/202610342-5ed6b946-97fd-4bf6-9adf-b3c62915fec0.png)
+
+## (5) 主題 : 百數排列2
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[10]={90,80,70,60,50,40,30,20,10,0};
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for (int i=0;i<10-1;i++)
+    {
+        if (a[i]>a[i+1])
+        {
+            int temp =a[i];
+            a[i] = a[i+1];
+            a[i+1] = temp;
+        }
+    }
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+}
+
+```
+![week11-4](https://user-images.githubusercontent.com/114201423/202610363-761ce756-0bd9-4bed-b8e6-e608e75633e4.png)
+
+
+## (6) 主題 : 百數排列3
+技巧 : 泡泡排序法 Bubble sort
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[10]={90,80,70,60,50,40,30,20,10,0};
+    for (int i=0;i<10;i++) printf("%d ",a[i]);
+    printf("\n");
+    for (int k=0;k<10-1;k++)
+    {
+        for (int i=0;i<10-1;i++)
+        {
+            if (a[i]>a[i+1])
+            {
+                int temp =a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+            }
+        }
+
+        for (int i=0;i<10;i++) printf("%d ",a[i]);
+        printf("\n");
+    }
+}
+```
+![week11-5](https://user-images.githubusercontent.com/114201423/202610376-0829fd71-640b-4bc1-b98f-03ce6a7111f8.png)
+
