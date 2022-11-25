@@ -405,6 +405,7 @@ int main()
 # git config --global user.name mcu10166035
 # git commit -m "week10"
 # git push
+# git pull --rebase 
 # git status
 ```
 ![week10-3](https://user-images.githubusercontent.com/114201423/201260022-c66133be-e7dd-499d-8025-f8b97a1582f6.png)
