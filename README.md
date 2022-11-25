@@ -13,7 +13,7 @@ I am mcu10166035!!!
 # git status
 # git config --global user.email mcu10166035@me.mcu.edu.tw
 # git config --global user.name mcu10166035
-# git commit -m "week10"
+# git commit -m "week"
 # git push
 # git pull --rebase 
 # git status
