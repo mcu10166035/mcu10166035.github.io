@@ -4,6 +4,21 @@ I am mcu10166035!!!
 # 2022c
 資傳一甲的程式設計的程式倉庫
 
+## 主題 : github upload 
+技巧 : 
+```cpp
+# cd 2022c
+# git status
+# git add .
+# git status
+# git config --global user.email mcu10166035@me.mcu.edu.tw
+# git config --global user.name mcu10166035
+# git commit -m "week10"
+# git push
+# git pull --rebase 
+# git status
+```
+
 # Week06
 
 ## (1) 考試 : 九九乘法表
