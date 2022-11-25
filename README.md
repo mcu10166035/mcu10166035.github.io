@@ -682,3 +682,163 @@ int main()
 ```
 ![week11-5](https://user-images.githubusercontent.com/114201423/202610376-0829fd71-640b-4bc1-b98f-03ce6a7111f8.png)
 
+# Week12
+
+## (1) 考試 : 百數反印
+考前複習、考後檢討
+```cpp
+#include <stdio.h>
+
+int a[100]
+
+int main()
+{   
+    for (int i=0;i<10;i++) {
+    	scanf("%d",&a[i]);
+    }
+    for (int k=0;k<100;k++){
+        for (int i=0;i<100;i++){
+            if (a[i]>a[i+1]){
+                int temp =a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+            }
+        }
+    }
+    for (int i=0;i<100;i++){ 
+	printf("%d\n",a[i]);
+    }
+}
+```
+
+## (2) 主題 : 排序-選擇排序法
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int a[5]={7,52,43,99,1};
+
+int main()
+{
+    for(int i=0;i<5;i++){
+        for(int j=i+1;j<5;j++){
+            if (a[i]>a[j]){
+                int temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(int i=0;i<5;i++){
+        printf("%d ",a[i]);
+    }
+}
+
+```
+![week12-1](https://user-images.githubusercontent.com/114201423/203896180-cd78fefb-c81f-4727-8716-7881e7f173d8.png)
+
+## (3) 主題 : 2D 陣列
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    int b=10;
+    int c[3];
+    int d[3]={10,20,30};
+    int g[2][3];
+    int h[2][3]={{10,20,30},{40,50,60}};
+    for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++){
+            printf("%d ",h[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+```
+![week12-2](https://user-images.githubusercontent.com/114201423/203896206-f07fd871-56fe-451c-9715-b01f9187427d.png)
+![week12-3](https://user-images.githubusercontent.com/114201423/203896218-cf3c164f-29b3-447f-b193-fcd928fa78b8.png)
+
+## (4) 主題 : 矩陣加法
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[10][10],b[10][10],c[10][10];
+
+    int n;
+
+    scanf("%d",&n);
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d",a[i][j]);
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d",b[i][j]);
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            c[i][j]=a[i][j]+b[i][j];
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            printf("%3d",c[i][j]);
+        }
+    }
+}
+
+```
+![week12-4](https://user-images.githubusercontent.com/114201423/203896235-0711fffb-5c08-44ec-a945-358aa30297c0.png)
+
+## (5) 主題 : 矩陣乘法
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+	int a[10][10],b[10][10],c[10][10];
+	int n;
+	
+	scanf("%d",&n);
+	
+	for(int i=0;i<n;i++){
+		for (int j=0;j<n;j++){
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(int i=0;i<n;i++){
+		for (int j=0;j<n;j++){
+			scanf("%d",&b[i][j]);
+		}
+	}
+	for(int i=0;i<n;i++){
+		for (int j=0;j<n;j++){
+			c[i][j]=0;
+			for (int k=0;k<n;k++){
+				c[i][j]+= a[i][k]*b[k][j];
+			}
+		}
+	}
+	for(int i=0;i<n;i++){
+		for (int j=0;j<n;j++){
+			printf("%3d ",c[i][j]);
+		}
+		printf("\n");
+	}
+}
+```
+![week12-5](https://user-images.githubusercontent.com/114201423/203896263-bfaf9bed-2bd0-49b1-8605-65444cd113b2.png)
