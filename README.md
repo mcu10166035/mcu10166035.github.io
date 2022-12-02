@@ -858,3 +858,143 @@ int main()
 }
 ```
 ![week12-5](https://user-images.githubusercontent.com/114201423/203896263-bfaf9bed-2bd0-49b1-8605-65444cd113b2.png)
+# Week13
+
+## (1) 考試 : 矩陣加法
+考前複習、考後檢討
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[10][10],b[10][10],c[10][10];
+
+    int n,m;
+
+    scanf("%d%d",&n,&m);
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            scanf("%d",a[i][j]);
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            scanf("%d",b[i][j]);
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            c[i][j]=a[i][j]+b[i][j];
+        }
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            printf("%d",c[i][j]);
+        }
+    }
+}
+
+```
+## (2) 主題 : 股票最佳買點與賣點-瘋狂程設題目
+技巧 : 左手i右手j
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int a[100];
+    for (int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+
+    int left,right;
+    int ans=-99999;
+    for (int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if (a[j]-a[i]>ans){
+                ans=a[j]-a[i];
+                left = a[i];
+                right=a[j];
+            }
+        }
+    }
+    printf("請按任意鍵繼續...\n");
+    printf("最大利潤=%d-%d=%d\n",right,left,ans);
+}
+
+```
+![week13-1](https://user-images.githubusercontent.com/114201423/205211604-450fc9c0-5a51-4307-ad52-54950832ce31.png)
+
+## (3) 主題 : A4白紙/黃金比例/Fibonacci數列
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[50];
+    a[0]=0;
+    a[1]=1;
+
+    for(int i=2;i<45;i++){
+        a[i]=a[i-1]+a[i-2];
+    }
+    for(int i=0;i<45;i++){
+        printf("%d ",a[i]);
+    }
+}
+
+```
+![week13-2](https://user-images.githubusercontent.com/114201423/205211589-1a94bfae-a525-4f7c-9040-9e4b59371c72.png)
+
+## (4) 主題 : 矩陣轉180 
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[200][200];
+    int n,m;
+    scanf("%d%d",&n,&m);
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\n");
+    for(int i=n-1;i>=0;i--){
+        for(int j=m-1;j>=0;j--){
+            printf("%2d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+```
+![week13-3](https://user-images.githubusercontent.com/114201423/205211574-6019355a-c63c-4df4-9e42-0e93d1e2bade.png)
+
+## (5) 主題 : Function 函式
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int addnum(int a,int b)
+{
+    return a+b;
+}
+int main()
+{
+    int ans = addnum(2,3);
+    printf("addnum(2,3) 會得到 %d\n",ans);
+}
+
+```
+![week13-4](https://user-images.githubusercontent.com/114201423/205211551-1e2ca8bc-bc2d-4d20-86b4-7dff40098b0d.png)
+
