@@ -998,3 +998,150 @@ int main()
 ```
 ![week13-4](https://user-images.githubusercontent.com/114201423/205211551-1e2ca8bc-bc2d-4d20-86b4-7dff40098b0d.png)
 
+# Week14
+
+## (1) 考試 : Fibonacci 數列
+考前複習、考後檢討
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a[50];
+    a[0]=0;
+    a[1]=1;
+
+    for(int i=2;i<45;i++){
+        a[i]=a[i-1]+a[i-2];
+    }
+    for(int i=0;i<45;i++){
+        printf("%d ",a[i]);
+    }
+}
+```
+## (2) 主題 : 函式
+技巧 : 宣告、定義、使用呼叫、參數、return
+```cpp
+#include <stdio.h>
+
+int a=10;
+
+void func()
+{
+    a=30;
+    printf("func()中 a 改成 : %d\n",a);
+}
+int main()
+{
+    printf("func()中 a 是 : %d\n",a);
+    func();
+    printf("func()中 a 是 : %d\n",a);
+}
+
+```
+![week14-1](https://user-images.githubusercontent.com/114201423/206615178-4131bf64-6d94-46d8-8a6f-7159f6a35465.png)
+
+## (3) 主題 : 函式
+技巧 : Global、local 參數
+```cpp
+#include <stdio.h>
+
+int a=10;
+
+void func()
+{
+    int a=20;
+    printf("func()裡的 a 是 : %d\n",a);
+    a=30;
+    printf("func()中 a 改成 : %d\n",a);
+}
+int main()
+{
+    printf("func()中 a 是 : %d\n",a);
+    func();
+    printf("func()中 a 是 : %d\n",a);
+}
+
+```
+![week14-2](https://user-images.githubusercontent.com/114201423/206615191-c598acf7-8ffa-4f99-bbf0-3ac6135df9bd.png)
+
+## (4) 主題 : 函式
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int n =30;
+
+int funA(int a,int b)
+{
+    printf("funA()的 a,b 是 : %d %d\n",a,b);
+    return a+b;
+}
+
+int funB(int n)
+{
+    printf("funB()的 n 是 : %d\n",n);
+    int ans=funA(n,n);
+    return ans;
+}
+
+int main()
+{
+    int a=10,b=20;
+    funB(b);
+    funA(a,b);
+    printf("main()的 a,b 是 : %d %d\n",a,b);
+}
+
+```
+![week14-3](https://user-images.githubusercontent.com/114201423/206615206-d4cf8bd5-607f-4d6f-9a04-9aa58d6b4a48.png)
+
+## (5) 主題 : 輾轉相除法
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int c;
+
+    while(1){
+        c =a%b;
+        if (c==0) break;
+        a=b;
+        b=c;
+    }
+
+    int ans = b;
+    printf("%d",ans);
+}
+
+```
+![week14-4](https://user-images.githubusercontent.com/114201423/206615217-f41fb9a0-1b83-4dfa-90b4-1ed6d48a01df.png)
+
+## (6) 主題 : 函式(輾轉相除法)
+技巧 : 函式呼叫函式
+```cpp
+#include <stdio.h>
+
+int gcd(int a,int b)
+{
+    if (a==0) return b;
+    if (b==0) return a;
+
+    return gcd(b,a%b);
+}
+
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+
+    int ans = gcd(a,b);
+    printf("%d",ans);
+}
+
+```
+![week14-5](https://user-images.githubusercontent.com/114201423/206615226-94d6f6c1-655f-4349-a476-c074fd46c817.png)
