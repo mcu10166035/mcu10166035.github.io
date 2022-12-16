@@ -1145,3 +1145,121 @@ int main()
 
 ```
 ![week14-5](https://user-images.githubusercontent.com/114201423/206615226-94d6f6c1-655f-4349-a476-c074fd46c817.png)
+
+# Week15
+
+## (1) 考試 : GCD函式
+考前複習、考後檢討
+```cpp
+#include <stdio.h>
+
+int gcd(int a,int b)
+{
+    if (a==0) return b;
+    if (b==0) return a;
+
+    return gcd(b,a%b);
+}
+
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+
+    int ans = gcd(a,b);
+    printf("%d",ans);
+}
+
+```
+## (2) 主題 : 字串
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello World\n");
+
+    char line[100]="Hello World";
+
+    printf("整數 %d\n",100);
+    printf("浮點數 %f\n",3.1415926535);
+    printf("%s 字串\n",line);
+}
+
+```
+![week15-1](https://user-images.githubusercontent.com/114201423/208018702-b6762d65-b36c-4c36-856d-f62350ed2520.png)
+
+## (3) 主題 : ASCII介紹
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    printf("%c : %d\n",65,65);
+    printf("%c : %d\n",66,66);
+    printf("%c : %d\n",67,67);
+    printf("%c : %d\n",'A','A');
+    printf("%c : %d\n",'B','B');
+    printf("%c : %d\n",'C','C');
+    printf("上面用數字 65 及單引號'a' 的結果一致\n");
+    printf("%c : %d\n",97,97);
+    printf("%c : %d\n",'a','a');
+}
+
+```
+![week15-2](https://user-images.githubusercontent.com/114201423/208018728-38d5642d-5da6-4145-80c1-01f24be91a47.png)
+
+## (4) 主題 : 特殊字元 && 字串陣列
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    printf("=%c  = %d =\n",65,65);
+    printf("=%c  = %d =\n",'+','+');
+    printf("=%c  = %d =\n",'\n','\n');
+    printf("=%c  = %d =\n",'\t','\t');
+    printf("=%c  = %d =\n",'\0','\0');
+
+    char line[] ="Hello World AAA";
+
+    for (int i=0; ;i++){
+        char c =line[i];
+        if (c==0) break;
+        printf("= %c ",c);
+    }
+}
+```
+![week15-3](https://user-images.githubusercontent.com/114201423/208018738-3d034df8-8e5d-479b-88ca-7f644150d503.png)
+
+## (5) 主題 : 字串反印
+技巧 : 
+```cpp
+#include <stdio.h>
+
+char line[3000];
+
+int main()
+{
+    printf("請輸入一串字母，不要有空格: ");
+    scanf("%s",line);
+
+    int n=0;
+    for (int i=0;line[i]!=0;i++){
+        n++;
+    }
+    for (int i= n-1;i>=0;i--){
+        printf("%c",line[i]);
+    }
+}
+
+```
+![week15-4](https://user-images.githubusercontent.com/114201423/208018762-f33c1cab-a828-4bbc-a0c6-a4d6e64fbd3e.png)
+
+![week15-5](https://user-images.githubusercontent.com/114201423/208018780-99c4cd5d-146a-433e-8c04-ce48c60a126d.png)
+
+
+
