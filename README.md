@@ -1260,6 +1260,116 @@ int main()
 ![week15-4](https://user-images.githubusercontent.com/114201423/208018762-f33c1cab-a828-4bbc-a0c6-a4d6e64fbd3e.png)
 
 ![week15-5](https://user-images.githubusercontent.com/114201423/208018780-99c4cd5d-146a-433e-8c04-ce48c60a126d.png)
+# Week16
+
+## (1) 考試 : 字串反印
+考前複習、考後檢討
+```cpp
+#include <stdio.h>
+
+char line[3000];
+
+int main()
+{
+    printf("請輸入一串字母，不要有空格: ");
+    scanf("%s",line);
+
+    int n=0;
+    for (int i=0;line[i]!=0;i++){
+        n++;
+    }
+    for (int i= n-1;i>=0;i--){
+        printf("%c",line[i]);
+    }
+}
+```
+
+## (2) 主題 : scanf()細節
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+    char line[300];
+    char *p=line;
+    int n=10;
+    int *p2=&n;
+    float f =3.1415926;
+    float *p3=&f;
+    char c='A';
+    char *p4=&c;
+
+}
 
 
+```
+![week16-1](https://user-images.githubusercontent.com/114201423/209268674-4d00442f-3c05-4eeb-8002-25245405b9a9.png)
+
+## (3) 主題 : string.h
+技巧 : 
+```cpp
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char line[300]="Hello";
+    int n =strlen(line);
+
+    printf("Hello 字串的長度:%d\n",n);
+
+    char line2[300];
+    strcpy(line2,line);
+    printf("line2 得到: %s\n",line2);
+
+    printf("比較字串 strcmp(line,line2)得到%d\n",strcmp(line,line2));
+}
+
+
+```
+![week16-2](https://user-images.githubusercontent.com/114201423/209268677-afe6543b-e8d1-4cd9-b42e-e613352ee790.png)
+
+
+
+## (4) 主題 : 股票最佳買點與賣點
+技巧 : 
+```cpp
+#include <stdio.h>
+
+int main()
+{
+	int n,c;
+	scanf("%d",&n);
+	int max=0,min=100;
+	int a[100];
+	
+	for (int i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	
+	for (int i = 0;i<n;i++){
+		for (int j=0;j<n;j++){
+			if (a[i]<a[j]&&a[i]<min){
+				min = a[i];
+				c = i;
+			}
+		}
+	}
+	for (int i = c;i<n;i++){
+		for (int j=c;j<n;j++){
+			if (a[i]>a[j]&&a[i]>max){
+				max = a[i];
+			}
+		}
+	}	
+	int b = max-min;
+	printf("請按任意鍵繼續 . . . \n");
+	printf("最大利潤=%d-%d=%d\n",max,min,b);
+}
+
+
+```
+![week16-3](https://user-images.githubusercontent.com/114201423/209268679-704106e2-7b0c-4108-80ff-f506bf182777.png)
+![week16-4](https://user-images.githubusercontent.com/114201423/209268680-0e6e66a4-e7b8-43f3-8fbb-586fd2563974.png)
+![week16-5](https://user-images.githubusercontent.com/114201423/209268681-25d0a050-03a5-49e2-a420-3a6907d7c19c.png)
 
